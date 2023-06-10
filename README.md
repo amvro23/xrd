@@ -25,7 +25,7 @@ Set inlet values for adsorption isotherm equations. Default parameter x represen
 isotherm.set_inlet()
 ```
 
-Adjust the values of x and y parameters according to your xrd results (The model carried default values).
+Adjust the values of x and y parameters according to your xrd results (The model carries default values).
 ```Python
 path = "xrd.txt"
 df = pd.read_csv(path, delimiter = '\t')
@@ -38,7 +38,7 @@ Select the desired peak (e.g., 2θ = 43 to 2θ = 45.5)
 xrd.zoom_area(43, 45.5)
 ```
 
-Choose the desired equation in order to fit the data. Note that a fit analysis report alongside a residual plot is also printed.
+Choose the desired equation in order to fit the data and obtain the XRD crystallite (grain) size. Note that a fit analysis report alongside a residual plot is also printed.
 ```Python
 xrd.gauss()
 ```
@@ -48,4 +48,75 @@ You can also draw fair comparison regarding the best fit on occasion since R squ
 ```Python
 xrd.voigt()
 ```
+
 ![Figure_2](https://github.com/amvro23/xrd/assets/91277572/e89f9cd1-8084-4f15-9cee-b6a6ba7468f5)
+
+```
+[[Model]]
+    (Model(voigt, prefix='v_') + Model(exponential, prefix='exp_'))
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 1284
+    # data points      = 192
+    # variables        = 5
+    chi-square         = 0.03201933
+    reduced chi-square = 1.7123e-04
+    Akaike info crit   = -1660.19086
+    Bayesian info crit = -1643.90338
+    R-squared          = 0.99793950
+[[Variables]]
+    exp_amplitude:  1.8677e-26 +/- 8.7869e-26 (470.47%) (init = 4.448869e-33)
+    exp_decay:     -0.80057479 +/- 0.06648062 (8.30%) (init = -0.6143452)
+    v_amplitude:    0.53691781 +/- 0.00377304 (0.70%) (init = 1)
+    v_center:       44.6143955 +/- 7.6836e-04 (0.00%) (init = 44.61536)
+    v_sigma:        0.11663920 +/- 7.4103e-04 (0.64%) (init = 0.3693009)
+    v_gamma:        0.11663920 +/- 7.4103e-04 (0.64%) == 'v_sigma'
+    v_fwhm:         0.42005165 +/- 0.00266867 (0.64%) == '1.0692*v_gamma+sqrt(0.8664*v_gamma**2+5.545083*v_sigma**2)'
+    v_height:       0.96073817 +/- 0.00387211 (0.40%) == '(v_amplitude/(max(1e-15, v_sigma*sqrt(2*pi))))*wofz((1j*v_gamma)/(max(1e-15, v_sigma*sqrt(2)))).real'
+[[Correlations]] (unreported correlations are < 0.250)
+    C(exp_amplitude, exp_decay)   = -1.0000
+    C(v_amplitude, v_sigma)       = +0.8232
+    C(exp_amplitude, v_amplitude) = -0.7420
+    C(exp_decay, v_amplitude)     = +0.7388
+    C(exp_amplitude, v_sigma)     = -0.5494
+    C(exp_decay, v_sigma)         = +0.5465
+Crystal size in nm with Voigt fitting: 20
+```
+
+```Python
+xrd.lorentzian()
+```
+![Figure_3](https://github.com/amvro23/xrd/assets/91277572/7796a6a7-466d-4990-aff9-0a7df84831f8)
+
+```
+[[Model]]
+    (Model(lorentzian, prefix='l_') + Model(exponential, prefix='exp_'))
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 5965
+    # data points      = 192
+    # variables        = 5
+    chi-square         = 0.08446267
+    reduced chi-square = 4.5167e-04
+    Akaike info crit   = -1473.95666
+    Bayesian info crit = -1457.66918
+    R-squared          = 0.99456467
+[[Variables]]
+    exp_amplitude:  1.4532e-84 +/- 7.2746e-83 (5005.89%) (init = 4.448869e-33)
+    exp_decay:     -0.23895951 +/- 0.06247247 (26.14%) (init = -0.6143452)
+    l_amplitude:    0.63690019 +/- 0.00522466 (0.82%) (init = 1)
+    l_center:       44.6176801 +/- 0.00126901 (0.00%) (init = 44.61536)
+    l_sigma:        0.19730233 +/- 0.00197555 (1.00%) (init = 0.3693009)
+    l_fwhm:         0.39460467 +/- 0.00395110 (1.00%) == '2.0000000*l_sigma'
+    l_height:       1.02751767 +/- 0.00622355 (0.61%) == '0.3183099*l_amplitude/max(1e-15, l_sigma)'
+[[Correlations]] (unreported correlations are < 0.250)
+    C(exp_amplitude, exp_decay)   = -1.0000
+    C(l_amplitude, l_sigma)       = +0.7966
+    C(exp_amplitude, l_amplitude) = -0.6326
+    C(exp_decay, l_amplitude)     = +0.6321
+    C(exp_amplitude, l_sigma)     = -0.4571
+    C(exp_decay, l_sigma)         = +0.4566
+    C(exp_amplitude, l_center)    = -0.3446
+    C(exp_decay, l_center)        = +0.3443
+Crystal size in nm with Lorentzian fitting: 22
+```
