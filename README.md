@@ -152,3 +152,10 @@ xrd.lorentzian()
     C(exp_decay, l_center)        = +0.3443
 Crystal size in nm with Lorentzian fitting: 22
 ```
+
+# References
+
+[Varun Jain, Mark C. Biesinger, Matthew R. Linford (2018). The Gaussian-Lorentzian Sum, Product, and Convolution (Voigt) functions in the context of peak fitting X-ray photoelectron spectroscopy (XPS) narrow scans. Applied Surface Science, Volume 447, 31 July 2018, Pages 548-553](https://pubs.acs.org/doi/full/10.1021/acsomega.0c06157)
+
+# Contact
+amvro23@gmail.com
