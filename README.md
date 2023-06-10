@@ -11,6 +11,7 @@ pip install -e git+https://github.com/amvro23/xrd/#egg=xrd
 ```
 Note: It might be useful to write "git+https://github.com/amvro23/xrd/#egg=xrd" if installing directly from a Python interpreter as # can be interpreted as a comment.
 
+# Usage
 ```Python
 from xrd.models import Scherrer
 ```
