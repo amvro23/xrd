@@ -1,7 +1,7 @@
 # xrd
 A python package for calculating XRD crystallite (grain) size
 
-[Install](#Install) / [Usage](#Usage) /  [XRD](#XRD) / [References](#References) / [Contact](#Contact)
+[Install](#Install) / [Usage](#Usage) /  [XRD](#XRD) / [Gauss](#Gauss) / [Voigt](#Voigt) / [Lorentzian](#Lorentzian) / [References](#References) / [Contact](#Contact)
 
 # Install
 First, make sure you have a Python 3 environment installed.
@@ -38,7 +38,7 @@ Select the desired peak (e.g., 2θ = 43 to 2θ = 45.5)
 ```Python
 xrd.zoom_area(43, 45.5)
 ```
-
+# Gauss
 Choose the desired equation in order to fit the data and obtain the XRD crystallite (grain) size. Note that a fit analysis report alongside a residual plot is also printed.
 ```Python
 xrd.gauss()
@@ -74,6 +74,7 @@ xrd.gauss()
 Crystal size in nm with Gaussian fitting: 20
 ```
 
+# Voigt
 You can also draw fair comparisons regarding the best fit on occasion since R squared is also printed with the plot.
 ```Python
 xrd.voigt()
@@ -113,6 +114,7 @@ xrd.voigt()
 Crystal size in nm with Voigt fitting: 20
 ```
 
+# Lorentzian
 ```Python
 xrd.lorentzian()
 ```
