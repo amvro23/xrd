@@ -16,6 +16,7 @@ setup(
    install_requires=[
       'numpy==1.19.*',
       'pandas>=1.1.*',
+      'scipy>=1.6',
       'matplotlib',
       'lmfit',
       ],
