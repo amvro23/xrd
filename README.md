@@ -74,7 +74,7 @@ xrd.gauss()
 Crystal size in nm with Gaussian fitting: 20
 ```
 
-You can also draw fair comparison regarding the best fit on occasion since R squared is also printed with the plot
+You can also draw fair comparisons regarding the best fit on occasion since R squared is also printed with the plot.
 ```Python
 xrd.voigt()
 ```
