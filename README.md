@@ -44,6 +44,35 @@ xrd.gauss()
 ```
 ![Figure_1](https://github.com/amvro23/xrd/assets/91277572/e763eec4-a01d-4ec0-89d2-10051e3714f8)
 
+```
+[[Model]]
+    (Model(gaussian, prefix='g_') + Model(exponential, prefix='exp_'))
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 1833
+    # data points      = 192
+    # variables        = 5
+    chi-square         = 0.08854927
+    reduced chi-square = 4.7353e-04
+    Akaike info crit   = -1464.88477
+    Bayesian info crit = -1448.59729
+    R-squared          = 0.99430169
+[[Variables]]
+    exp_amplitude:  5.1616e-15 +/- 9.3517e-15 (181.18%) (init = 4.448869e-33)
+    exp_decay:     -1.47171669 +/- 0.08725847 (5.93%) (init = -0.6143452)
+    g_amplitude:    0.40679699 +/- 0.00335422 (0.82%) (init = 1)
+    g_center:       44.6127722 +/- 0.00129809 (0.00%) (init = 44.61536)
+    g_sigma:        0.18233135 +/- 0.00143627 (0.79%) (init = 0.3693009)
+    g_fwhm:         0.42935752 +/- 0.00338216 (0.79%) == '2.3548200*g_sigma'
+    g_height:       0.89007471 +/- 0.00561759 (0.63%) == '0.3989423*g_amplitude/max(1e-15, g_sigma)'
+[[Correlations]] (unreported correlations are < 0.250)
+    C(exp_amplitude, exp_decay)   = -0.9999
+    C(g_amplitude, g_sigma)       = +0.6944
+    C(exp_amplitude, g_amplitude) = -0.2829
+    C(exp_decay, g_amplitude)     = +0.2731
+Crystal size in nm with Gaussian fitting: 20
+```
+
 You can also draw fair comparison regarding the best fit on occasion since R squared is also printed with the plot
 ```Python
 xrd.voigt()
