@@ -1,7 +1,7 @@
 # xrd
 A python package for calculating XRD crystallite (grain) size
 
-[Install](#Install) / [Usage](#Usage) /  [XRD](#XRD) / [Gauss](#Gauss) / [Voigt](#Voigt) / [Lorentzian](#Lorentzian) / [References](#References) / [Contact](#Contact)
+[Install](#Install) / [Usage](#Usage) / [Gauss](#Gauss) / [Voigt](#Voigt) / [Lorentzian](#Lorentzian) / [References](#References) / [Contact](#Contact)
 
 # Install
 First, make sure you have a Python 3 environment installed.
