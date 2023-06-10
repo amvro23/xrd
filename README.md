@@ -41,11 +41,11 @@ xrd.zoom_area(43, 45.5)
 Choose the desired equation in order to fit the data. Note that a fit analysis report alongside a residual plot is also printed.
 ```Python
 xrd.gauss()
-![Figure_1](https://github.com/amvro23/xrd/assets/91277572/e763eec4-a01d-4ec0-89d2-10051e3714f8)
 ```
+![Figure_1](https://github.com/amvro23/xrd/assets/91277572/e763eec4-a01d-4ec0-89d2-10051e3714f8)
 
 You can also draw fair comparison regarding the best fit on occasion since R squared is also printed with the plot
 ```Python
 xrd.voigt()
-![Figure_2](https://github.com/amvro23/xrd/assets/91277572/e89f9cd1-8084-4f15-9cee-b6a6ba7468f5)
 ```
+![Figure_2](https://github.com/amvro23/xrd/assets/91277572/e89f9cd1-8084-4f15-9cee-b6a6ba7468f5)
