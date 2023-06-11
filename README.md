@@ -21,7 +21,7 @@ Create an instance. Default optional values are instrument_defect = 0.0, shape_f
 xrd = Scherrer()
 ```
 
-Set inlet values for adsorption isotherm equations. Default parameter x represents the [eV] and optional parameter y represents the [counts/s].
+Set inlet XRD values. Default parameter x represents the [eV] and optional parameter y represents the [counts/s].
 ```Python
 xrd.set_inlet()
 ```
