@@ -23,7 +23,7 @@ xrd = Scherrer()
 
 Set inlet values for adsorption isotherm equations. Default parameter x represents the [eV] and optional parameter y represents the [counts/s].
 ```Python
-isotherm.set_inlet()
+xrd.set_inlet()
 ```
 
 Adjust the values of x and y parameters according to your xrd results (The model carries default values).
@@ -32,6 +32,7 @@ path = "xrd.txt"
 df = pd.read_csv(path, delimiter = '\t')
 x = np.array(df['eV'])
 y = np.array(df['counts/s'])
+xrd.set_inlet(x, y)
 ```
 
 Select the desired peak (e.g., 2θ = 43 to 2θ = 45.5)
