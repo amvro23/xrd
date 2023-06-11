@@ -30,8 +30,8 @@ Adjust the values of x and y parameters according to your xrd results (The model
 ```Python
 path = "xrd.txt"
 df = pd.read_csv(path, delimiter = '\t')
-x = np.array(df['eV'])
-y = np.array(df['counts/s'])
+x = df['eV'].values
+y = df['counts/s'].values
 xrd.set_inlet(x, y)
 ```
 
