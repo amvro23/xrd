@@ -35,7 +35,7 @@ y = np.array(df['counts/s'])
 xrd.set_inlet(x, y)
 ```
 
-Select the desired peak (e.g., 2θ = 43 to 2θ = 45.5)
+Select the desired peak (e.g., 2θ = 43 to 2θ = 45.5).
 ```Python
 xrd.zoom_area(43, 45.5)
 ```
