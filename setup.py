@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 
 setup(
-   name='srd',
+   name='xrd',
    version='0.1.0.rc3',
    description='XRD package.',
    long_description=long_description,
@@ -16,7 +16,7 @@ setup(
    install_requires=[
       'numpy==1.19.*',
       'pandas>=1.1.*',
-      'scipy>=1.6',
+      'scipy>=1.7.*',
       'matplotlib',
       'lmfit',
       ],
