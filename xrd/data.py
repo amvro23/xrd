@@ -1,4 +1,21 @@
+import numpy as np
 import pandas as pd
+from io import StringIO
+
+def read_xy(text):
+    df = pd.read_csv(
+        StringIO(text.strip()),
+        sep=None,              # auto-detect delimiter
+        engine="python",       # required for sep=None
+        header="infer",        # use header if present (e.g., x,y)
+        comment="#",           # ignore commented lines
+        skipinitialspace=True  # handle spaces after delimiters
+    )
+    # Keep only the first two columns, coerce to float
+    df = df.iloc[:, :2].astype(float)
+    x = df.iloc[:, 0].to_numpy()
+    y = df.iloc[:, 1].to_numpy()
+    return x, y
 
 xrd_data = """
 x	y
@@ -6158,12 +6175,4 @@ x	y
 89.99257	5
 """
 
-with open('temp.csv', 'w') as file:
-    file.write(xrd_data)
-
-# Read the CSV file using pandas
-df = pd.read_csv('temp.csv', delimiter='\s+')
-
-# Extract the values into separate arrays
-x = df['x'].values
-y = df['y'].values
+x, y = read_xy(xrd_data)
