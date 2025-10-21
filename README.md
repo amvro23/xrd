@@ -82,12 +82,7 @@ for r in summary:
 <img width="590" height="590" alt="image" src="https://github.com/user-attachments/assets/41a75f94-8d6d-4855-a0e8-3ce353d39649" />
 <img width="598" height="590" alt="image" src="https://github.com/user-attachments/assets/6a24d348-5b0d-4588-bd83-d617c8fc6482" />
 
-```Python
-out
-Lorentzian  R2=0.9946  RMSE=0.0210  AIC=-1474.0  BIC=-1457.7  D≈21.8 nm
-Gaussian    R2=0.9943  RMSE=0.0215  AIC=-1464.9  BIC=-1448.6  D≈20.0 nm
-Voigt       R2=0.9143  RMSE=0.0833  AIC=-944.4  BIC=-928.1  D≈11.6 nm
-```
+<pre> ``` out Lorentzian R²=0.9946 RMSE=0.0210 AIC=-1474.0 BIC=-1457.7 D≈21.8 nm Gaussian R²=0.9943 RMSE=0.0215 AIC=-1464.9 BIC=-1448.6 D≈20.0 nm Voigt R²=0.9143 RMSE=0.0833 AIC=-944.4 BIC=-928.1 D≈11.6 nm ``` </pre>
 
 
 # References
