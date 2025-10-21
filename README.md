@@ -20,17 +20,15 @@ from xrd.models import Scherrer
 By default, the class loads x, y from xrd.data and auto-zooms around the strongest peak:
 Set inlet XRD values. Default parameter x represents the [eV] and optional parameter y represents the [counts/s].
 
-<img width="580" height="453" alt="image" src="https://github.com/user-attachments/assets/8af9fc08-9f82-4857-8def-8d1044e319a2" />
-<img width="590" height="590" alt="image" src="https://github.com/user-attachments/assets/640f1f92-24f2-49a9-8a0e-db6a5a93a953" />
-
-
-
 ```Python
 xrd = Scherrer()           # uses default x,y from .data
 xrd.xrd_initial_plot()     # optional: see the full scan
 xrd.zoom_area(43.0, 45.5)  # choose a peak window in 2θ (deg)
 D_nm, out = xrd.fit_gaussian()
 ```
+
+<img width="580" height="453" alt="image" src="https://github.com/user-attachments/assets/8af9fc08-9f82-4857-8def-8d1044e319a2" />
+<img width="590" height="590" alt="image" src="https://github.com/user-attachments/assets/640f1f92-24f2-49a9-8a0e-db6a5a93a953" />
 
 Provide your own data
 Your x must be 2θ (degrees) and y is intensity (a.u.):
