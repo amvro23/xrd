@@ -31,6 +31,7 @@ D_nm, out = xrd.fit_gaussian()
 <img width="590" height="590" alt="image" src="https://github.com/user-attachments/assets/640f1f92-24f2-49a9-8a0e-db6a5a93a953" />
 
 Provide your own data in numpy arrays form
+
 Your x must be 2θ (degrees) and y is intensity (a.u.):
 ```Python
 your_x = x
