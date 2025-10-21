@@ -20,6 +20,11 @@ from xrd.models import Scherrer
 By default, the class loads x, y from xrd.data and auto-zooms around the strongest peak:
 Set inlet XRD values. Default parameter x represents the [eV] and optional parameter y represents the [counts/s].
 
+<img width="580" height="453" alt="image" src="https://github.com/user-attachments/assets/8af9fc08-9f82-4857-8def-8d1044e319a2" />
+<img width="590" height="590" alt="image" src="https://github.com/user-attachments/assets/640f1f92-24f2-49a9-8a0e-db6a5a93a953" />
+
+
+
 ```Python
 xrd = Scherrer()           # uses default x,y from .data
 xrd.xrd_initial_plot()     # optional: see the full scan
@@ -74,6 +79,10 @@ for r in summary:
     print(f"{r['model']:10s}  R2={r['R2']:.4f}  RMSE={r['RMSE']:.4f}  "
           f"AIC={r['AIC']:.1f}  BIC={r['BIC']:.1f}  D≈{r['D_nm']:.1f} nm")
 ```
+<img width="590" height="590" alt="image" src="https://github.com/user-attachments/assets/6003276f-e50a-4af0-b9dc-242c406566e2" />
+<img width="590" height="590" alt="image" src="https://github.com/user-attachments/assets/41a75f94-8d6d-4855-a0e8-3ce353d39649" />
+<img width="598" height="590" alt="image" src="https://github.com/user-attachments/assets/6a24d348-5b0d-4588-bd83-d617c8fc6482" />
+
 
 
 
