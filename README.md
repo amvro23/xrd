@@ -1,7 +1,7 @@
 # xrd
 A python package for calculating XRD crystallite (grain) size
 
-[Install](#Install) / [Usage](#Usage) / [Gauss](#Gauss) / [Voigt](#Voigt) / [Lorentzian](#Lorentzian) / [References](#References) / [Contact](#Contact)
+[Install](#Install) / [Usage](#Usage) / [Quick_Start](#Quick_Start) / [fit_gaussian](#fit_gaussian) / [References](#References) / [Contact](#Contact)
 
 # Install
 First, make sure you have a Python 3 environment installed.
@@ -16,11 +16,10 @@ Note: It might be useful to write "git+https://github.com/amvro23/xrd/#egg=xrd" 
 from xrd.models import Scherrer
 ```
 
-Quick start (uses packaged demo data)
-
+# Quick_Start (uses packaged demo data)
 By default, the class loads x, y from xrd.data and auto-zooms around the strongest peak:
-
 Set inlet XRD values. Default parameter x represents the [eV] and optional parameter y represents the [counts/s].
+
 ```Python
 xrd = Scherrer()           # uses default x,y from .data
 xrd.xrd_initial_plot()     # optional: see the full scan
@@ -54,7 +53,7 @@ Selecting a peak
 xrd.zoom_area(lower=43.0, upper=45.5)
 ```
 
-Gaussian
+# Gaussian
 
 Fit a Gaussian peak + background and compute D:
 
