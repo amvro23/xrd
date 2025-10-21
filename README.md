@@ -16,7 +16,7 @@ Note: It might be useful to write "git+https://github.com/amvro23/xrd/#egg=xrd" 
 from xrd.models import Scherrer
 ```
 
-# Quick_Start (uses packaged demo data)
+# Quick_Start
 By default, the class loads x, y from xrd.data and auto-zooms around the strongest peak:
 Set inlet XRD values. Default parameter x represents the [eV] and optional parameter y represents the [counts/s].
 
@@ -53,7 +53,7 @@ Selecting a peak
 xrd.zoom_area(lower=43.0, upper=45.5)
 ```
 
-# Gaussian
+# fit_gaussian
 
 Fit a Gaussian peak + background and compute D:
 
