@@ -68,11 +68,6 @@ print(f"Crystallite size D = {D_nm:.2f} nm")
 out
 Crystallite size D = 20.01 nm
 
-<xrd.models.Scherrer at 0x182a3e1aa40>
-
-
-
-Crystallite size D = 20.01 nm
 Fit Result
 Model: (Model(gaussian, prefix='g_') + Model(exponential, prefix='b_'))
 
